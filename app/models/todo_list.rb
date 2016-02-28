@@ -3,4 +3,5 @@ class TodoList < ActiveRecord::Base
 	has_many :todo_items, :dependent => :destroy
 	default_scope { order :list_due_date }
 	validates  :list_name, :user_id, :list_due_date, presence: true
+	validates :list_name, uniqueness: true
 end
