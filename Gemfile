@@ -9,7 +9,7 @@ gem 'spring', :group => :development
 
 gem 'active_model_serializers'
 
-gem 'sqlite3'
+
 
 gem 'rack-cors'
 
@@ -29,6 +29,9 @@ gem 'rack-cors'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+   gem 'sqlite3'
+end
 
 group :production do
   gem 'pg'
