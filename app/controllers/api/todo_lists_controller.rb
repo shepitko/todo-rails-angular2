@@ -1,7 +1,10 @@
 class Api::TodoListsController < Api::ApiController
 
+	before_action :authenticate_api_user!
+
 	def index
-		todo_lists = TodoList.all
+		p current_api_user 
+		todo_lists = current_api_user.todo_lists.all
 		render json: todo_lists.to_json(:include => [:todo_items])
 	end
 

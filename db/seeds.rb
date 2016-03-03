@@ -6,7 +6,7 @@ dates = [today, two_days_ago, three_days_ago]
 User.destroy_all
 TodoList.destroy_all
 
-20.times { |index| TodoList.create! list_name: "List #{index}", list_due_date: dates.sample }
+10.times { |index| TodoList.create! list_name: "List #{index}", list_due_date: dates.sample }
 
 TodoList.all.each do |list|
   list.todo_items.create! [
@@ -17,8 +17,8 @@ TodoList.all.each do |list|
 end
 
 users = User.create! [
-  { email: "jim-test@gmail.com", first_name: "Jim", last_name: "Tesoffib", password: "abc123" },
-  { email: "rich-test@gmail.com", first_name: "Rich", last_name: "Keriban",password: "123abc" }
+  { email: "jimtest@gmail.com", password: "123aDbc111" },
+  { email: "richtest@gmail.com", password: "123abc111" }
 ]
 
 TodoList.all.each do |list|

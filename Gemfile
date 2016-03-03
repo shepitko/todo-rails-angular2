@@ -9,8 +9,8 @@ gem 'spring', :group => :development
 
 gem 'active_model_serializers'
 
-
-
+gem 'devise_token_auth'
+gem 'omniauth'
 gem 'rack-cors'
 
 

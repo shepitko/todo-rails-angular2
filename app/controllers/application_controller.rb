@@ -1,15 +1,12 @@
 class ApplicationController < ActionController::API
-#before_filter :add_cors_headers
+  include DeviseTokenAuth::Concerns::SetUserByToken
+  include ActionController::RequestForgeryProtection
 before_filter :cors_preflight_check
 after_filter :cors_set_access_control_headers
-#rescue_from ActiveRecord::RecordNotFound, with: :render_404
+protect_from_forgery with: :null_session
 rescue_from ActiveSupport::MessageVerifier::InvalidSignature, with: :render_error
 
 	private
-	def go_back_link_to(path)
-		@go_back_link_to ||= path
-		@go_back_link_to
-	end
 	def cors_set_access_control_headers
 		headers['Access-Control-Allow-Origin'] = '*'
 		headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
