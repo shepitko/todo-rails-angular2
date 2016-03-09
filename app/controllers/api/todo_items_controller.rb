@@ -48,7 +48,7 @@ class Api::TodoItemsController < Api::ApiController
       	params.permit(:updated_at, :title, :due_date, :completed, :description)
     end
     def find_todo_list
-      	@list = TodoList.find(params[:todo_list_id])
+      	@list = current_api_user.todo_lists.find(params[:todo_list_id])
     end
 
 end

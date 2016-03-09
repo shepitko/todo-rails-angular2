@@ -1,10 +1,6 @@
 module Api
 	class ApiController < ApplicationController
-		#include ActionController::HttpAuthentication::Basic::ControllerMethods
-		#include ActionController::HttpAuthentication::Token::ControllerMethods
-		#skip_before_filter :verify_authenticity_token
-	    #before_filter :authenticate
-	   
+
 	    def current_user
 	      @current_user
 	    end

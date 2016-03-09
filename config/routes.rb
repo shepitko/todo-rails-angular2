@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :user
 
   #get "/login" => "sessions#new", as: "login"
   #delete "/logout" => "sessions#destroy", as: "logout"
