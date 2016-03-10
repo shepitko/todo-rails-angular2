@@ -23,8 +23,6 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       ## User Info
-      t.string :name
-      t.string :nickname
       t.string :email
 
       ## Tokens
