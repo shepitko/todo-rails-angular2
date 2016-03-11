@@ -1,2 +1,2 @@
 == Backend Rails-Api
-address - http://rails-api-todo.herokuapp.com/api
+link - http://rails-api-todo.herokuapp.com/api
