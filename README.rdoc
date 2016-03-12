@@ -1,2 +1,2 @@
 == Backend Rails-Api
-link - http://rails-api-todo.herokuapp.com/api
+link - http://rails-api-todo.herokuapp.com/api/todo_lists
